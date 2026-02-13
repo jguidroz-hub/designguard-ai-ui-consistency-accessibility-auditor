@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface DesignSystems/[id]Item {
+interface DesignSystemsDetailItem
   id: string;
   title?: string;
   status?: string;
@@ -10,8 +10,8 @@ interface DesignSystems/[id]Item {
   [key: string]: any;
 }
 
-export default function DesignSystems/[id]Page() {
-  const [items, setItems] = useState<DesignSystems/[id]Item[]>([]);
+export default function DesignSystemsDetailPage
+  const [items, setItems] = useState<DesignSystemsDetailItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
   const [newTitle, setNewTitle] = useState('');
@@ -39,7 +39,7 @@ export default function DesignSystems/[id]Page() {
   };
 
   const handleDelete = async (id: string) => {
-    await fetch(`/api/design-systems/[id]/${id}`, { method: 'DELETE' });
+    await fetch(`/ApiDesign-sSystemsDetail${id}`, { method: 'DELETE' });
     setItems(prev => prev.filter(i => i.id !== id));
   };
 
